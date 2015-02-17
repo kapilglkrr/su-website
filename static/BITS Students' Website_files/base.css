@@ -1,0 +1,242 @@
+html {
+	height: 100%;
+	width:100%;
+}
+body {
+	position: relative;
+    background-color:rgba(0,255,0,0.1) !important;
+    background-image:url(/static/images/3.gif);
+	border: 0 none;
+	font-size: 100%;
+	margin-top: 2px;
+	padding: 0px;
+	border: 0;
+	outline: 0;
+	vertical-align: top;
+	font: normal 150%/1.6em 'Myriad pro', Tahoma, sans-serif;
+	color: #000;
+	width: 100%;
+	height: 100%;
+	
+	min-width: 650px;
+	margin-right: -10px;
+}
+
+@font-face
+{
+font-family: oswald-bold;
+src: url(/static/Oswald-Bold.ttf);
+}
+
+@font-face
+{
+font-family: oswald-light;
+src: url(/static/Oswald-Light.ttf);
+}
+@font-face
+{
+font-family: oswald-regular;
+src: url(/static/Oswald-Regular.ttf);
+}
+
+
+/*==================================================================================HEAD=============================================================*/
+.head {
+	position: relative;
+	width: 100%;
+	height: 17%;
+	min-height:200px;
+	background-image: -webkit-linear-gradient(top, #dedede 0%,#ebebeb 3%,#ebebeb 97%,#dedede 100%);
+}
+
+.head img
+{	width:150px;
+	margin-left:15%;
+	padding-top:1%;
+	float:left;
+}
+.head p
+{	margin-right:15%;
+	font-family:oswald-regular;
+	float:right;
+	font-size:4em;
+	margin-top:5%;
+}
+.sticky {
+	position: fixed !important;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	border-top: 0;
+}
+
+@media screen and (max-width: 1088px) 
+{	
+
+.head p
+{	font-size:3.5em;	
+}
+
+.head img
+{	width:130px;
+}
+
+.head
+{	min-height:180px;
+}
+}
+
+/*==================================================================================SLIDER=======================================================*/
+.bx-wrapper
+{
+	width:75%;
+	margin-bottom:2%;
+	margin-top:100px;
+}
+.bx-wrapper img
+{	width:100%;
+}
+
+div#bx-pager
+{	width:80%;
+	margin:auto;
+}
+
+div#bx-pager a img
+{	margin-left:0.7%;
+	margin-right:0.7%;
+	transition:transform ease 0.5s;
+	-webkit-transition:-webkit-transform ease 0.5s;
+	width:10.5%;
+	-moz-box-shadow: 0 0 5px #ccc;
+	-webkit-box-shadow: 0 0 5px #ccc;
+	box-shadow: 0 0 5px #ccc;
+	border: solid #fff 3px;
+	left: -5px;
+	background: #fff;
+}
+
+div#bx-pager a img:hover
+{	transform:scale(1.2);
+	-webkit-transform: scale(1.2);
+}
+
+/*================================================================================CONTENT======================================================*/
+
+.nav_cont_active
+{	display:block !important;
+}
+
+
+.content1 {
+	margin-top: 5%;
+	padding-left: 10%;
+	padding-right: 5%;
+	margin-right: -15px;
+    
+}
+.content-left {
+	padding: 20px;
+    margin-right:0px;
+	height: auto;
+	margin-left: 15px;
+	border-right-style: solid;
+	border-right-width: 0px;
+    background-color:#fff;
+	
+}
+.content-right {
+	border-top: 3px solid;
+	padding-top: 15px;
+    margin-left: 2%;
+	margin-right: -15px;
+    background-color:#fff;
+	padding-left:0px !important;
+	padding-right:0px !important;
+	padding-top:0px !important;
+	
+}
+.cont-right {
+	height: 54px;
+	min-height:40px;
+	padding:15px;
+	font-family:oswald-regular;
+	letter-spacing:1px;
+	cursor:pointer;
+	background-size: 200% 50%;
+	background-image: linear-gradient(to right, rgb(255,255,255) 50%, rgb(110,110,110) 50%);
+	-webkit-transition: background-position 0.3s ease, color 0.3s;
+	-moz-transition: background-position 0.3s ease, color 0.3s;
+	transition: background-position 0.3s ease, color 0.3s;
+	
+}
+.content-right div:hover
+{	background-position: -100% 0;
+	color:rgb(240,240,240);
+	-webkit-transition: background-position 0.3s, color 0.3s;
+	-moz-transition: background-position 0.3s, color 0.3s;
+	transition: background-position 0.3s, color 0.3s;
+}
+.cont-right :hover {
+	border-left: 2px solid;
+	
+}
+.nav-cont {
+	padding: 5px;
+	padding-top: 30px;
+	height: 100%;
+	display:none;
+}
+.drop-fix {
+	height: 400%;
+	overflow-y: scroll; 
+}
+
+.content-right div
+{	margin:0px !important;
+}
+
+.sticky2 
+{	position:fixed !important;
+	top:70px;
+	z-index: 1;
+	border-top: 0;
+	width:19.4%;
+}
+
+
+/*========================================================FOOTER==========================================================*/
+footer
+{	height:50px;
+	width:100%;
+	background-color:rgb(50,50,50);
+	margin-top:50px;
+}
+
+ul#footer_list
+{	float:left;
+	color:rgb(150,150,150);
+}
+
+ul#footer_list li 
+{	float:left;
+	padding-left:30px;
+	padding-top:8px;
+}
+
+ul#footer_list li a
+{ 	color:inherit;
+	text-decoration: none;
+}
+
+ul#footer_list li:hover
+{	color:rgb(210,210,210);
+}
+
+footer p
+{	float:right;
+	color:rgb(150,150,150);
+	padding-right:60px;
+	padding-top:8px;
+}

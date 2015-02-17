@@ -1,0 +1,12 @@
+from django.contrib import admin
+from cda.models import Assoc,Club,Dept
+
+class AssocAdmin(admin.ModelAdmin):
+    list_display=('assoc_name',)
+    search_fields=('assoc_id','assoc_name')
+    ordering=('assoc_name',)
+
+
+admin.site.register(Assoc,AssocAdmin)
+admin.site.register(Club)
+admin.site.register(Dept)

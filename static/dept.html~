@@ -1,0 +1,352 @@
+<html>
+<head>
+	<title> BITS Students' Website</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<script type="text/javascript" src="/static/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/static/js/desc_fetch.js"></script>
+	<script type="text/javascript" src="/static/js/jquery.bxslider.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/jquery.bxslider.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/bootstrap_calendar.css">
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+		var scrollTop2;
+		$('.slider1').bxSlider({
+			auto: true,
+			captions: true,
+			adaptiveHeight: true,
+			mode: 'fade',
+			pagerCustom: '#bx-pager',
+			slideWidth: 10000,
+		});
+  
+		
+		
+			
+		
+			{			// grab the initial top offset of the navigation 
+						var stickyNavTop2 = $('#list').offset().top;
+						// our function that decides weather the navigation bar should have "fixed" css position or not.
+						var stickyNav2 = function(){
+						var scrollTop2 = $(window).scrollTop(); // our current vertical position from the top
+						// if we've scrolled more than the navigation, change its position to fixed to stick to top,
+						// otherwise change it back to relative
+					
+					
+					
+						if ( (scrollTop2-300 > stickyNavTop2) && ($(window).width()>=992) ) { 
+						$('#list').addClass('sticky2');
+						} else {
+						$('#list').removeClass('sticky2'); 
+						}
+						};
+						stickyNav2();
+						// and run it again every time you scroll
+						$(window).scroll(function() {
+						stickyNav2();
+						});
+						
+			}
+			// $(document).click(function(){
+			// 	var top = $(window).scrollTop();
+			// 	alert(top);
+			// });
+		});
+	</script>
+</head>
+<body>
+	<div id="mask">
+	</div>
+<!--================================================NAV MENU======================================================================-->
+	
+		
+		
+		<nav class="navbar navbar-inverse navbar-/static-top" role="navigation" style="position:fixed;width:100%;-moz-box-shadow: 0 0 5px 5px #888;-webkit-box-shadow: 0 0 5px 5px#888;box-shadow: 0 0 5px 5px #888;">
+	
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <!-- <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#">Brand</a>
+		    </div>
+ -->
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+		      <ul class="nav navbar-nav" style="padding:0px;margin:auto;width:900px;">
+		        <li class="active"><a href="/">Home</a></li>
+		        <li class="dropdown">
+		          <a href="/static/BITS Students' Website_files/BITS Students' Website.htm" class="dropdown-toggle" data-toggle="dropdown">Students' Union<b class="caret"></b></a>
+		          <ul class="dropdown-menu">
+		            <li><a href="/static/BITS Students' Website_files/BITS Students' Website.htm">Constitution</a></li>
+		            <li><a href="/static/BITS Students' Website_files/BITS Students' Website.htm">Oasis Charter</a></li>
+		            <li><a href="/static/BITS Students' Website_files/BITS Students' Website.htm">Apogee Charter</a></li>
+		            <li><a href="/static/BITS Students' Website_files/BITS Students' Website.htm">Procedure Manual</a></li>
+		            
+		          </ul>
+		        </li>
+		        <li class="dropdown">
+		          <a href="/static/BITS Students' Website_files/BITS Students' Website.htm" class="dropdown-toggle" data-toggle="dropdown">College Fests<b class="caret"></b></a>
+		          <ul class="dropdown-menu">
+		            <li><a target='_blank' href="http://www.bits-oasis.org/">Oasis 2013</a></li>
+		            <li><a target='_blank' href="http://www.bits-apogee.org">Apogee 2014</a></li>
+		            <li><a target='_blank' href="http://www.bits-bosm.org/">BOSM 2013</a></li>
+		            
+		          </ul>
+		        </li>
+		        <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Departments<b class="caret"></b></a>
+		          <ul class="dropdown-menu drop-fix">
+		            <li><a href="#" id = "1201" class = "dept_descript">Art, Design and Publicity</a></li>
+		            <li><a href="#" id = "1202" class = "dept_descript">AudiForce</a></li>
+		            <li><a href="#" id = "1203" class = "dept_descript">Backstage</a></li>
+		            <li><a href="#" id = "1204" class = "dept_descript">Controlz</a></li>
+		            <li><a href="#" id = "1205" class = "dept_descript">DoPy</a></li>
+		            <li><a href="#" id = "1206" class = "dept_descript">DOT</a></li>
+		            <li><a href="#" id = "1207" class = "dept_descript">DVM</a></li>
+		            <li><a href="#" id = "1208" class = "dept_descript">Firewallz</a></li>
+		            <li><a href="#" id = "1209" class = "dept_descript">Informalz</a></li>
+		            <li><a href="#" id = "1210" class = "dept_descript">Jhankaar</a></li>
+		            <li><a href="#" id = "1211" class = "dept_descript">Lights</a></li>
+		            <li><a href="#" id = "1212" class = "dept_descript">Publications and Correspondence</a></li>
+		            <li><a href="#" id = "1213" class = "dept_descript">Paper Evaluation and Presentation</a></li>
+		            <li><a href="#" id = "1214" class = "dept_descript">Reception and Accomodation</a></li>
+		            <li><a href="#" id = "1215" class = "dept_descript">Soundz</a></li>
+		            <li><a href="#" id = "1216" class = "dept_descript">Sponsorship and Marketing</a></li>
+		            		            
+		          </ul>
+		        </li>
+		        <li class="dropdown">
+		         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Clubs<b class="caret"></b></a>
+		          <ul class="dropdown-menu drop-fix">
+		            <li><a href="#" id = "1101" class = "club_descript">ArBits</a></li>
+		            <li><a href="#" id = "1102" class = "club_descript">Astro Club</a></li>
+		            <li><a href="#" id = "1103" class = "club_descript">CrAC</a></li>
+		            <li><a href="#" id = "1104" class = "club_descript">Dance Club</a></li>
+		            <li><a href="#" id = "1105" class = "club_descript">Debating Society</a></li>
+		            <li><a href="#" id = "1106" class = "club_descript">EDC</a></li>
+		            <li><a href="#" id = "1107" class = "club_descript">ELAS</a></li>
+		            <li><a href="#" id = "1108" class = "club_descript">EPC</a></li>
+		            <li><a href="#" id = "1109" class = "club_descript">HAS</a></li>
+		            <li><a href="#" id = "1110" class = "club_descript">HDC</a></li>
+		            <li><a href="#" id = "1111" class = "club_descript">HPC</a></li>
+		            <li><a href="#" id = "1112" class = "club_descript">Matrix</a></li>
+		            <li><a href="#" id = "1113" class = "club_descript">MIMEs</a></li>
+		            <li><a href="#" id = "1114" class = "club_descript">Music Club</a></li>
+		            <li><a href="#" id = "1115" class = "club_descript">Photography Club</a></li>
+		            <li><a href="#" id = "1116" class = "club_descript">Poetry Club</a></li>
+		            <li><a href="#" id = "1117" class = "club_descript">Ragamalika</a></li>		            
+		          </ul>
+		        </li>
+		        <li class="dropdown">
+		         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Associations<b class="caret"></b></a>
+		          <ul class="dropdown-menu drop-fix">
+		            <li><a href="#" id = "1022" class = "assoc_descript">Dept. of Economics and Finance</a></li>
+		            <li><a href="#" id = "1023" class = "assoc_descript">Mathematics Association</a></li>
+		            <li><a href="#" id = "1024" class = "assoc_descript">Pharmacy Association</a></li>
+		            <li><a href="#" id = "1021" class = "assoc_descript">Chemistry Association</a></li>
+		            <li><a href="#" id = "1025" class = "assoc_descript">Physics Association</a></li>
+		            <li><a href="#" id = "1011" class = "assoc_descript">ACM</a></li>
+		            <li><a href="#" id = "1012" class = "assoc_descript">BITSMUN</a></li>
+		            <li><a href="#" id = "1013" class = "assoc_descript">Nirmaan</a></li>
+		            <li><a href="#" id = "1014" class = "assoc_descript">NSS</a></li>
+		            
+		            	            
+		          </ul>
+		        </li>
+		         <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Know Your Representatives<b class="caret"></b></a>
+		          <ul class="dropdown-menu">
+		            <li><a href="#">Action</a></li>
+		            <li><a href="#">Another action</a></li>
+		            <li><a href="#">Something else here</a></li>
+		            <li class="divider"></li>
+		            <li><a href="#">Separated link</a></li>
+		            <li class="divider"></li>
+		            <li><a href="#">One more separated link</a></li>
+		          </ul>
+		        </li>
+		      </ul>
+		      
+		      
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		  
+		</nav>
+
+<!--==============================================HEADER========================================================================-->
+	<div id="home_logo">
+		<img src="/static/images/logo.png" id="logo">
+	</div>
+
+
+<!--============================================================SLIDER=============================================================================-->		
+		
+	<div class="slider1">
+		<div class="slide"><img title="Chrysanthemum" src="/static/images/chrysanthemum.jpg" /></div>
+		<div class="slide"><img title="Desert" src="/static/images/desert.jpg" /></div>
+		<div class="slide"><img title="Hydrangeas" src="/static/images/hydrangeas.jpg" /></div>
+		<div class="slide"><img title="Jellyfish" src="/static/images/jellyfish.jpg" /></div>
+		<div class="slide"><img title="Koala" src="/static/images/koala.jpg" /></div>
+		<div class="slide"><img title="Lighthouse" src="/static/images/lighthouse.jpg" /></div>
+		<div class="slide"><img title="Penguins" src="/static/images/penguins.jpg" /></div>
+		<div class="slide"><img title="Tulips" src="/static/images/tulips.jpg" /></div>
+	</div>
+
+	<div id="bx-pager">
+		<a data-slide-index="0" href=""><img src="/static/images/chrysanthemum(1).jpg" /></a>
+		<a data-slide-index="1" href=""><img src="/static/images/desert(1).jpg" /></a>
+		<a data-slide-index="2" href=""><img src="/static/images/hydrangeas(1).jpg" /></a>
+		<a data-slide-index="3" href=""><img src="/static/images/jellyfish(1).jpg" /></a>
+		<a data-slide-index="4" href=""><img src="/static/images/koala(1).jpg" /></a>
+		<a data-slide-index="5" href=""><img src="/static/images/lighthouse(1).jpg" /></a>
+		<a data-slide-index="6" href=""><img src="/static/images/penguins(1).jpg" /></a>
+		<a data-slide-index="7" href=""><img src="/static/images/tulips(1).jpg" /></a>
+	</div>
+
+<!--==========================================================CONTENT============================================================================-->
+			
+	<div class="row content1" style="margin-right:0px;">
+			<div class="col-md-7 content-left" style="background-color:transparent;">
+			<h2>{{ p.dept_name }}</h2>
+			</div>
+			<div class="col-md-7 content-left" style="min-height:600px;">
+                        {{ p.dept_desc|safe|linebreaks }}
+			
+				<div class="nav-cont nav_cont_active" id="dept_head_not">
+					
+					</div>
+					
+				</div>		<div class="col-md-4 ">
+			<div id="list">
+				<div class="content-right">
+					<div class="cont-right">SU Constitution</div>
+					<div class="cont-right">Cactus-BITS Annual Magazine</div>
+					<div class="cont-right">The Fine Print</div>
+					<div class="cont-right">Vaani</div>
+					<div class="cont-right">Archives(Fest Websites)</div>
+				</div>
+				<div class="calendar_test content-right" style="margin-top:10px;">
+				</div>
+			</div>
+			</div>
+		</div>
+	
+<!--=================================================FOOTER=============================================================-->		
+	<footer>
+		<ul id="footer_list">
+			<li><a href="http://www.bits-pilani.ac.in/"?>About BITS</a></li>
+			<li><a href="https://bits-pilani-login.appspot.com/?SAMLRequest=fVLLTuswEN0j8Q%2BW93kVpIusJqiAEJWAG9HAgp3rTNIJjp3rcVru3%2BOmIGABK0vHx%2Bcxnvn5a6%2FZFhyhNTnP4pQzMMrWaNqcP1bX0Rk%2FL46P5iR7PYjF6DfmAf6NQJ6Fl4bEdJHz0RlhJSEJI3sg4ZVYLe5uxSxOxeCst8pqzpZXOW87VLJt7DocjYZug0pDa3olwXSyxm79Ym2nG86ePmLN9rGWRCMsDXlpfIDS7DRKT6JZVmV%2FxMmpSNNnzsp3pws0hwa%2FxVofSCRuqqqMyr%2BrahLYYg3uPrBDVGtbDbGy%2Fd6%2BlES4DXAjNQFnCyJwPgS8tIbGHtwK3BYVPD7c5nzj%2FUAiSXa7Xfwpk8hkjZ6iAbU0GEsVo0mkIl5MAxZTR%2Fdlsr83kB8JePHpMU%2B%2BSBXvH7fvs7wqrUb1ny20trtLB9KHMt6Nocu1db30P7tlcTYhWEfNRBWjoQEUNgg1Z0lxcP2%2BIWFv3gA%3D&RelayState=https%3A%2F%2Fwww.google.com%2Fa%2Fgoa.bits-pilani.ac.in%2FServiceLogin%3Fservice%3Dmail%26passive%3Dtrue%26rm%3Dfalse%26continue%3Dhttps%253A%252F%252Fmail.google.com%252Fa%252Fgoa.bits-pilani.ac.in%252F%26ss%3D1%26ltmpl%3Ddefault%26ltmplcache%3D2%26emr%3D1">BITS Mail</a></li>
+		</ul>
+		<p>&copy; STUDENTS' UNION TECHNICAL TEAM, BITS PILANI</p>
+	</footer>
+<!--================================================LIGHT BOX==========================================================-->
+<div class="baap_mask">
+	<div class="mask">
+	</div>
+	<div>
+		<img src="/static/images/chrysanthemum.jpg" class="mask_image">
+	</div>
+</div>
+<!--================================================SCRIPTS========================================================-->
+<script type="text/javascript">
+$('.club_descript').click(function(e){
+		e.preventDefault();
+                //alert('hi');
+		var id = $(this).attr('id');
+		window.location.href="/club_fetch/?id="+id+"";
+		
+	});
+$('.dept_descript').click(function(e){
+		e.preventDefault();
+                //alert('hi');
+		var id = $(this).attr('id');
+		window.location.href="/dept_fetch/?id="+id+"";
+});
+
+$('.assoc_descript').click(function(e){
+		e.preventDefault();
+                //alert('hi');
+		var id = $(this).attr('id');
+		window.location.href="/assoc_fetch/?id="+id+"";
+});
+
+	
+		$('.cont-head li').click(function(){
+			var id = $(this).attr('id')+'_not';
+			var active_id = $('.nav_cont_active').attr('id');
+			$('#'+active_id).removeClass('nav_cont_active');
+			$('#'+id).addClass('nav_cont_active');
+			var active_id2 = $('.cont-head li[class=active]').attr('id');
+			$('#'+active_id2).removeClass('active');
+			var id2 = $(this).attr('id');
+			$('#'+id2).addClass('active');
+		});
+	</script>
+	<script src="/static/js/bootstrap_calendar.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			 theMonths = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+               theDays = ["S", "M", "T", "W", "T", "F", "S"];
+
+               $('.calendar_test').calendar({
+                 months: theMonths,
+                 days: theDays,
+               });
+		$("#item4, #item5").hover(function(){
+			$('img', this).addClass('rotating1');
+		}, function(){ $('img', this).removeClass('rotating1');
+
+		});
+
+		$('#accordion').collapse({
+			  toggle: false
+			});
+		});
+	</script>
+	
+	<script type="text/javascript">
+		$('.clubs').click(function(){
+			$('.mask').fadeToggle("slow");
+			<!-- $('.baap_mask').fadeToggle(); -->
+			 $('.mask_image').fadeToggle("slow");
+			$('body').css('overflow-y','hidden');
+                         var poster_id = $(this).attr('id');
+			$('.mask_image').attr('src','/static/images/notices/clubs/'+poster_id+'.jpg');
+			
+		});
+$('.dept_images').click(function(){
+			$('.mask').fadeToggle("slow");
+			<!-- $('.baap_mask').fadeToggle(); -->
+			 $('.mask_image').fadeToggle("slow");
+			$('body').css('overflow-y','hidden');
+			var poster_id = $(this).attr('id');
+			$('.mask_image').attr('src','/static/images/notices/depts/'+poster_id+'.jpg');
+		});
+		$('.assoc_images').click(function(){
+			$('.mask').fadeToggle("slow");
+			<!-- $('.baap_mask').fadeToggle(); -->
+			 $('.mask_image').fadeToggle("slow");
+			$('body').css('overflow-y','hidden');
+			var poster_id = $(this).attr('id');
+			$('.mask_image').attr('src','/static/images/notices/assocs/'+poster_id+'.jpg');
+		});
+		
+		$('.mask').click(function(){
+			$(this).css('display','none');
+			$('body').css('overflow-y','auto');
+			$('.mask_image').css('display','none');
+		});
+		
+	</script>
+</body>
+</html>
